@@ -1,0 +1,17 @@
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Uploads folder (optional if storing images)
+/uploads/
+
+# System files
+.DS_Store
+
+# IDE/Editor folders
+.vscode/
