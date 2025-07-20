@@ -7,6 +7,7 @@ import path from "path";
 import authRoutes from "./routes/auth.js";
 import productRoutes from "./routes/productRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 
 // DB Connection
 import connectDB from "./config/db.js";
@@ -28,6 +29,8 @@ app.use("/uploads", express.static(path.join(process.cwd(), "/uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/admin", adminRoutes);
+
+app.use("/api/orders", orderRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
