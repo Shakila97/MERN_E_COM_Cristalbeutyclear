@@ -14,9 +14,9 @@ const router = express.Router();
 router.get("/", getAllProducts);
 router.get("/:id", getProductById);
 
-// Admin Routes
-router.post("/admin", protect, isAdmin, createProduct);
-router.put("/admin/:id", protect, isAdmin, updateProduct);
-router.delete("/admin/:id", protect, isAdmin, deleteProduct);
+// Admin Routes (Fixed the route paths)
+router.post("/", protect, isAdmin, createProduct);          // POST /api/products
+router.put("/:id", protect, isAdmin, updateProduct);        // PUT /api/products/:id
+router.delete("/:id", protect, isAdmin, deleteProduct);     // DELETE /api/products/:id
 
 export default router;

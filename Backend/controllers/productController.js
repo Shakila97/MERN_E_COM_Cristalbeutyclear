@@ -1,14 +1,14 @@
 import Product from "../models/Product.js";
 
 // @desc    Create a new product (Admin only)
-// @route   POST /api/admin/products
+// @route   POST /api/products
 // @access  Private/Admin
 export const createProduct = async (req, res) => {
   try {
-    const { name, description, price, category, brand, countInStock, image } = req.body;
+    const { title, description, price, category, brand, countInStock, image } = req.body;
 
     const product = new Product({
-      name,
+      title,
       description,
       price,
       category,
@@ -55,16 +55,16 @@ export const getProductById = async (req, res) => {
 };
 
 // @desc    Update a product (Admin only)
-// @route   PUT /api/admin/products/:id
+// @route   PUT /api/products/:id
 // @access  Private/Admin
 export const updateProduct = async (req, res) => {
   try {
-    const { name, description, price, category, brand, countInStock, image } = req.body;
+    const { title, description, price, category, brand, countInStock, image } = req.body;
 
     const product = await Product.findById(req.params.id);
 
     if (product) {
-      product.name = name || product.name;
+      product.title = title || product.title;
       product.description = description || product.description;
       product.price = price || product.price;
       product.category = category || product.category;
@@ -83,14 +83,14 @@ export const updateProduct = async (req, res) => {
 };
 
 // @desc    Delete a product (Admin only)
-// @route   DELETE /api/admin/products/:id
+// @route   DELETE /api/products/:id
 // @access  Private/Admin
 export const deleteProduct = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
 
     if (product) {
-      await product.remove();
+      await product.deleteOne(); // ✅ FIXED: Avoid product.remove()
       res.json({ message: "Product removed" });
     } else {
       res.status(404).json({ message: "Product not found" });

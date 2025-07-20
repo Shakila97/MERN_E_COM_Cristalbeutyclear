@@ -19,12 +19,12 @@ const app = express();
 app.use(express.json());
 
 // Connect to DB
-connectDB(); // or use mongoose.connect(process.env.MONGO_URL) directly
+connectDB(); // OR: mongoose.connect(process.env.MONGO_URL)
 
 // Public folder for images
 app.use("/uploads", express.static(path.join(process.cwd(), "/uploads")));
 
-// Routes
+// Route Middleware
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/admin", adminRoutes);
