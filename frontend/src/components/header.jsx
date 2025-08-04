@@ -49,29 +49,29 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="left" className="w-80">
                 <div className="flex flex-col gap-6 mt-6">
-                  <Link href="/" className="text-2xl font-bold text-blue-600">
-                    CrystalBeauty Clear
+                  <Link href="/" className="text-2xl font-bold text-rose-600">
+                    BeautyBloom
                   </Link>
                   <nav className="flex flex-col gap-4">
-                    <Link href="/new" className="text-gray-700 hover:text-blue-600 font-medium py-2">
+                    <Link href="/new" className="text-gray-700 hover:text-rose-600 font-medium py-2">
                       New Arrivals
                     </Link>
-                    <Link href="/makeup" className="text-gray-700 hover:text-blue-600 font-medium py-2">
+                    <Link href="/makeup" className="text-gray-700 hover:text-rose-600 font-medium py-2">
                       Makeup
                     </Link>
-                    <Link href="/skincare" className="text-gray-700 hover:text-blue-600 font-medium py-2">
+                    <Link href="/skincare" className="text-gray-700 hover:text-rose-600 font-medium py-2">
                       Skincare
                     </Link>
-                    <Link href="/fragrance" className="text-gray-700 hover:text-blue-600 font-medium py-2">
+                    <Link href="/fragrance" className="text-gray-700 hover:text-rose-600 font-medium py-2">
                       Fragrance
                     </Link>
-                    <Link href="/tools" className="text-gray-700 hover:text-blue-600 font-medium py-2">
+                    <Link href="/tools" className="text-gray-700 hover:text-rose-600 font-medium py-2">
                       Tools & Brushes
                     </Link>
-                    <Link href="/brands" className="text-gray-700 hover:text-blue-600 font-medium py-2">
+                    <Link href="/brands" className="text-gray-700 hover:text-rose-600 font-medium py-2">
                       Brands
                     </Link>
-                    <Link href="/sale" className="text-blue-600 hover:text-blue-700 font-medium py-2">
+                    <Link href="/sale" className="text-rose-600 hover:text-rose-700 font-medium py-2">
                       Sale
                     </Link>
                   </nav>
@@ -88,31 +88,22 @@ export function Header() {
             </Sheet>
           </div>
 
-          <Link href="/" className="text-xl md:text-2xl font-bold text-blue-600">
-            CrystalBeauty <span className="text-blue-400">Clear</span>
+          <Link href="/" className="text-xl md:text-2xl font-bold text-rose-600">
+            BeautyBloom
           </Link>
 
           {/* Search - Desktop */}
           <div className="hidden md:flex flex-1 max-w-xl mx-8">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <Input 
-                type="search" 
-                placeholder="Search for beauty products..." 
-                className="pl-10 pr-4 py-2 w-full"
-              />
+              <Input type="search" placeholder="Search for products, brands..." className="pl-10 pr-4 py-2 w-full" />
             </div>
           </div>
 
           {/* Actions */}
           <div className="flex items-center gap-2 md:gap-4">
             {/* Mobile search toggle */}
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="md:hidden" 
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-            >
+            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsSearchOpen(!isSearchOpen)}>
               <Search className="h-5 w-5" />
             </Button>
 
@@ -136,50 +127,46 @@ export function Header() {
           <div className="md:hidden pb-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <Input 
-                type="search" 
-                placeholder="Search for beauty products..." 
-                className="pl-10 pr-4 py-2 w-full"
-              />
+              <Input type="search" placeholder="Search for products, brands..." className="pl-10 pr-4 py-2 w-full" />
             </div>
           </div>
         )}
 
         {/* Navigation - Desktop only */}
         <nav className="hidden md:block py-4">
-          <ul className="flex items-center justify-center gap-8">
+          <ul className="flex items-center gap-8">
             <li>
-              <Link href="/new" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link href="/new" className="text-gray-700 hover:text-rose-600 font-medium">
                 New Arrivals
               </Link>
             </li>
             <li>
-              <Link href="/makeup" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link href="/makeup" className="text-gray-700 hover:text-rose-600 font-medium">
                 Makeup
               </Link>
             </li>
             <li>
-              <Link href="/skincare" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link href="/skincare" className="text-gray-700 hover:text-rose-600 font-medium">
                 Skincare
               </Link>
             </li>
             <li>
-              <Link href="/fragrance" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link href="/fragrance" className="text-gray-700 hover:text-rose-600 font-medium">
                 Fragrance
               </Link>
             </li>
             <li>
-              <Link href="/tools" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link href="/tools" className="text-gray-700 hover:text-rose-600 font-medium">
                 Tools & Brushes
               </Link>
             </li>
             <li>
-              <Link href="/brands" className="text-gray-700 hover:text-blue-600 font-medium">
+              <Link href="/brands" className="text-gray-700 hover:text-rose-600 font-medium">
                 Brands
               </Link>
             </li>
             <li>
-              <Link href="/sale" className="text-blue-600 hover:text-blue-700 font-medium">
+              <Link href="/sale" className="text-rose-600 hover:text-rose-700 font-medium">
                 Sale
               </Link>
             </li>

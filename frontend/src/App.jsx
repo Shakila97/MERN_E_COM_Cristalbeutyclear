@@ -124,7 +124,7 @@ function App() {
 
               {/* Logo */}
               <Link to="/" className="text-xl md:text-2xl font-bold text-rose-600">
-                CrystalBeautyclear
+                BeautyBloom
               </Link>
 
               {/* Search - Desktop */}
@@ -588,7 +588,7 @@ function App() {
                     </div>
                     <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <p className="text-gray-400 text-sm text-center sm:text-left">
-                        © 2024 CrystalBeautyclear. All rights reserved.
+                        © 2024 BeautyBloom. All rights reserved.
                       </p>
                       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-400 text-sm">
                         <Link to="/privacy" className="hover:text-white transition-colors text-center">
